@@ -6,10 +6,12 @@ const store = useCounterStore()
 
 <template>
   <div>
-    <h1>Counter Page</h1>
-    <p>count is {{ store.count }}</p>
-    <p>Double count is {{ store.doubleCount }}</p>
-    <button @click="store.increment">increment</button>
-    <button @click="store.decrement">decrement</button>
+    <h1 class="text-h3">Counter Page</h1>
+    <p class="text-subtitle-1">count is {{ store.count }}</p>
+    <p class="text-subtitle-1">Double count is {{ store.doubleCount }}</p>
+    <div class="flex items-center gap-2">
+      <v-btn @click="store.increment" color="primary">increment</v-btn>
+      <v-btn @click="store.decrement" color="primary">decrement</v-btn>
+    </div>
   </div>
 </template>
